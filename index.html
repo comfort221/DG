@@ -2,6 +2,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>COM'FORT | Samba THIAM </title>
@@ -218,11 +224,13 @@
 
 .partner-logo {
   max-height: 70px;
-  max-width: 180px;
+  max-width: 160px;
   object-fit: contain;
-  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.15));
   cursor: pointer;
   transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
 }
 
 .partner-logo:hover {
@@ -232,6 +240,43 @@
     
   </style>
 </head>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 3,
+    spaceBetween: 30,
+    grabCursor: true,
+    breakpoints: {
+      // quand écran ≤ 480px (mobile)
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      // écran moyen (tablette)
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // écran large (desktop)
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      // très grand écran
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+    },
+  });
+</script>
 
 <body>
 
@@ -298,52 +343,34 @@
     </a>
   </div>
   <!-- Section Partenaires -->
-<section class="partners-carousel container my-5">
+<section class="partners-swiper container my-5">
   <h3 class="text-white text-center mb-4">Ils nous ont fait confiance</h3>
 
-  <div id="partnersCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-touch="true">
-    <div class="carousel-inner d-flex align-items-center justify-content-center">
-
-      <div class="carousel-item active">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
         <a href="https://entreprise1.com" target="_blank" rel="noopener">
-          <img src="logo1.png" class="d-block mx-auto partner-logo" alt="Entreprise 1" />
+          <img src="logo1.png" alt="Entreprise 1" class="partner-logo" />
         </a>
       </div>
-
-      <div class="carousel-item">
+      <div class="swiper-slide">
         <a href="https://entreprise2.com" target="_blank" rel="noopener">
-          <img src="logo2.png" class="d-block mx-auto partner-logo" alt="Entreprise 2" />
+          <img src="logo2.png" alt="Entreprise 2" class="partner-logo" />
         </a>
       </div>
-
-      <div class="carousel-item">
+      <div class="swiper-slide">
         <a href="https://entreprise3.com" target="_blank" rel="noopener">
-          <img src="logo3.png" class="d-block mx-auto partner-logo" alt="Entreprise 3" />
+          <img src="logo3.png" alt="Entreprise 3" class="partner-logo" />
         </a>
       </div>
-
-      <div class="carousel-item">
+      <div class="swiper-slide">
         <a href="https://entreprise4.com" target="_blank" rel="noopener">
-          <img src="logo4.png" class="d-block mx-auto partner-logo" alt="Entreprise 4" />
+          <img src="logo4.png" alt="Entreprise 4" class="partner-logo" />
         </a>
       </div>
-
     </div>
-
-    <!-- Controls (facultatifs, pour navigation manuelle) -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#partnersCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Précédent</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#partnersCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Suivant</span>
-    </button>
   </div>
 </section>
-
-
-
   <p class="slogan">La créativité au service de votre visibilité!</p>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
