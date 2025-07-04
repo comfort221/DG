@@ -1,18 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Swiper CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>COM'FORT | Samba THIAM </title>
+  <title>COM'FORT | Samba THIAM</title>
+  
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
   <style>
     body {
@@ -47,6 +47,8 @@
       border: 4px solid white;
       margin: 100px auto 1rem;
       display: block;
+      z-index: 10;
+      position: relative;
     }
 
     h1, h4 {
@@ -86,27 +88,83 @@
       text-align: center;
     }
 
-    .carousel {
-      max-width: 95vw;
-      margin: 1.5rem auto 2rem;
-    }
-
-    .carousel-inner {
-      border-radius: 16px;
-      overflow: hidden;
-    }
-
-    .carousel-inner img {
+    /* Bannière responsive */
+    .header-banner {
       width: 100%;
-      height: 75vh;
+      max-width: 100%;
+      height: 280px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff20;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin-top: 15px;
+    }
+
+    .banner-img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      object-position: center;
+      filter: brightness(0.75);
     }
 
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      filter: invert(1);
+    /* Logos carousel section */
+    .partners-swiper {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto 60px;
     }
 
+    .partners-swiper h3 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .partner-logo {
+      max-height: 70px;
+      max-width: 160px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.15));
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      margin: 0 auto;
+      display: block;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .partner-logo:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    /* Carte NFC */
+    .nfc-card img {
+      max-width: 320px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      cursor: pointer;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .nfc-card p {
+      color: white;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    /* Réseaux sociaux */
     .social-icons {
       display: flex;
       justify-content: center;
@@ -159,139 +217,55 @@
       margin-bottom: 40px;
     }
 
+    @media (max-width: 600px) {
+      .header-banner {
+        height: 140px;
+      }
+      .avatar {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        border-width: 3px;
+      }
+      .partner-logo {
+        max-height: 50px;
+        max-width: 120px;
+        padding: 6px;
+      }
+    }
+
     @media (min-width: 600px) {
       .avatar {
         width: 150px;
         height: 150px;
       }
-
       .description {
         max-width: 600px;
       }
-
       .logo {
         width: 130px;
         padding: 8px 12px;
       }
-
-      .carousel-inner img {
-        height: 480px;
-      }
-    .header-banner {
-  width: 100%;
-  max-width: 100%;
-  height: 280px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff20;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  transition: height 0.3s ease;
-}
-
-.banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* Sur écrans petits (smartphones) */
-@media (max-width: 600px) {
-  .header-banner {
-    width: 150px;       /* largeur fixe petite */
-    height: 150px;      /* hauteur égale pour carré */
-    margin: 0 auto 1rem auto; /* centrer avec marge en bas */
-    border-radius: 20px;
-  }
-
-  .banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-}
-
-      .partners-section h3 {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.partner-logo {
-  max-height: 70px;
-  max-width: 160px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.15));
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  display: block;
-  margin: 0 auto;
-}
-
-.partner-logo:hover {
-  transform: scale(1.1);
-}
     }
-    
   </style>
 </head>
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-<script>
-  const swiper = new Swiper('.mySwiper', {
-    loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    slidesPerView: 3,
-    spaceBetween: 30,
-    grabCursor: true,
-    breakpoints: {
-      // quand écran ≤ 480px (mobile)
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 15,
-      },
-      // écran moyen (tablette)
-      600: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      // écran large (desktop)
-      900: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      // très grand écran
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
-    },
-  });
-</script>
 
 <body>
 
   <img src="LOGO cOM4FORT.png" alt="Logo COMFORT" class="logo" />
-  <div class="header-banner">
-  <img src="background.jpg" alt="Bannière" class="banner-img">
-</div>
-<img src="avatar.jpeg" alt="Avatar Abdourahmane Diallo" class="avatar" />
 
+  <div class="header-banner">
+    <img src="background.jpg" alt="Bannière" class="banner-img" />
+  </div>
+
+  <img src="avatar.jpeg" alt="Avatar Abdourahmane Diallo" class="avatar" />
 
   <h1>Samba THIAM</h1>
   <h4>
     <span class="highlight-box">
-      <i class="fas fa-user-tie"></i>  Directeur Général
-    </span><br> COM'FORT
+      <i class="fas fa-user-tie"></i> Directeur Général
+    </span><br />
+    COM'FORT
   </h4>
 
   <p class="description">
@@ -300,79 +274,42 @@
 
   <a href="contact.vcf" class="btn-contact" download>📇 Ajouter Contact</a>
 
-  <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-    <div class="carousel-inner">
-      <div class="carousel-item active"><img src="p3.jpg" alt="Produit 1" /></div>
-      <div class="carousel-item"><img src="produit2.jpeg" alt="Produit 3" /></div>
-      <div class="carousel-item"><img src="p3.jpg" alt="Produit 2" /></div>
-      <div class="carousel-item"><img src="produit2.jpeg" alt="Produit 3" /></div>
+  <!-- Carousel logos partenaires -->
+  <section class="partners-swiper">
+    <h3>Ils nous ont fait confiance</h3>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="https://entreprise1.com" target="_blank" rel="noopener">
+            <img src="logo1.png" alt="Entreprise 1" class="partner-logo" />
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://entreprise2.com" target="_blank" rel="noopener">
+            <img src="logo2.png" alt="Entreprise 2" class="partner-logo" />
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://entreprise3.com" target="_blank" rel="noopener">
+            <img src="logo3.png" alt="Entreprise 3" class="partner-logo" />
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://entreprise4.com" target="_blank" rel="noopener">
+            <img src="logo4.png" alt="Entreprise 4" class="partner-logo" />
+          </a>
+        </div>
+      </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Précédent</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Suivant</span>
-    </button>
-  </div>
+  </section>
 
   <!-- Carte NFC avec lien WhatsApp -->
-  <div class="text-center mt-5 mb-5">
+  <div class="nfc-card text-center mt-5 mb-5">
     <a href="https://wa.me/221783952347" target="_blank">
-      <img src="main-carte.png" alt="Carte NFC Abdourahmane" style="max-width: 320px; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); cursor: pointer;">
+      <img src="main-carte.png" alt="Carte NFC Abdourahmane" />
     </a>
-    <p style="color: white; margin-top: 0.5rem; font-size: 1.1rem;">
-      📲 Cliquez sur <strong>la carte</strong>, ajoutez-nous en contact ou envoyez un message via nos réseaux ci-dessous.
-    </p>
+    <p>📲 Cliquez sur <strong>la carte</strong>, ajoutez-nous en contact ou envoyez un message via nos réseaux ci-dessous.</p>
   </div>
 
   <!-- Réseaux sociaux -->
-  <div class="social-icons text-center">
-    <a href="https://www.facebook.com/share/1Ag3odUt1t/?mibextid=wwXIfr" target="_blank" class="facebook">
-      <i class="fab fa-facebook-f fa-lg"></i>
-    </a>
-    <a href="https://www.instagram.com/com_fort_studio?igsh=MWlmeWFxNDR2ZHI1cA%3D%3D&utm_source=qr" target="_blank" class="instagram">
-      <i class="fab fa-instagram fa-lg"></i>
-    </a>
-    <a href="https://www.tiktok.com/@com_fort.sn" target="_blank" class="tiktok">
-      <i class="fab fa-tiktok fa-lg"></i>
-    </a>
-    <a href="https://wa.me/221783952347" target="_blank" class="whatsapp">
-      <i class="fab fa-whatsapp fa-lg"></i>
-    </a>
-  </div>
-  <!-- Section Partenaires -->
-<section class="partners-swiper container my-5">
-  <h3 class="text-white text-center mb-4">Ils nous ont fait confiance</h3>
-
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <a href="https://entreprise1.com" target="_blank" rel="noopener">
-          <img src="logo1.png" alt="Entreprise 1" class="partner-logo" />
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <a href="https://entreprise2.com" target="_blank" rel="noopener">
-          <img src="logo2.png" alt="Entreprise 2" class="partner-logo" />
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <a href="https://entreprise3.com" target="_blank" rel="noopener">
-          <img src="logo3.png" alt="Entreprise 3" class="partner-logo" />
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <a href="https://entreprise4.com" target="_blank" rel="noopener">
-          <img src="logo4.png" alt="Entreprise 4" class="partner-logo" />
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-  <p class="slogan">La créativité au service de votre visibilité!</p>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  <div
