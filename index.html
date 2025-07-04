@@ -202,9 +202,39 @@
   z-index: 2;
   position: relative;
 }
+      .partners-section h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
+.partners-logos {
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.partner-logo-link {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.partner-logo-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.partner-logo {
+  max-height: 50px;
+  max-width: 120px;
+  object-fit: contain;
+  display: block;
+}
 
     }
+    
   </style>
 </head>
 
@@ -272,6 +302,25 @@
       <i class="fab fa-whatsapp fa-lg"></i>
     </a>
   </div>
+  <!-- Section Partenaires -->
+<section class="partners-section text-center my-5">
+  <h3 style="color: white; margin-bottom: 1rem;">Ils nous ont fait confiance</h3>
+  <div class="partners-logos d-flex justify-content-center gap-4 flex-wrap">
+    <a href="https://entreprise1.com" target="_blank" rel="noopener" class="partner-logo-link">
+      <img src="logo1.png" alt="Entreprise 1" class="partner-logo" />
+    </a>
+    <a href="https://entreprise2.com" target="_blank" rel="noopener" class="partner-logo-link">
+      <img src="logo2.png" alt="Entreprise 2" class="partner-logo" />
+    </a>
+    <a href="https://entreprise3.com" target="_blank" rel="noopener" class="partner-logo-link">
+      <img src="logo3.png" alt="Entreprise 3" class="partner-logo" />
+    </a>
+    <a href="https://entreprise4.com" target="_blank" rel="noopener" class="partner-logo-link">
+      <img src="logo4.png" alt="Entreprise 4" class="partner-logo" />
+    </a>
+  </div>
+</section>
+
 
   <p class="slogan">La créativité au service de votre visibilité!</p>
 
