@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,7 +20,6 @@
       flex-direction: column;
       align-items: center;
     }
-
     .logo {
       position: fixed;
       top: 15px;
@@ -30,13 +31,9 @@
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
       z-index: 1000;
     }
-
     @media (max-width: 480px) {
-      .logo {
-        width: 120px;
-      }
+      .logo { width: 120px; }
     }
-
     .banner-container {
       width: 100%;
       max-width: 100%;
@@ -48,7 +45,6 @@
       position: relative;
       margin-top: 1.5rem;
     }
-
     .banner-img {
       width: 100%;
       height: 100%;
@@ -56,7 +52,6 @@
       object-position: center;
       display: block;
     }
-
     .avatar {
       width: 140px;
       height: 140px;
@@ -69,12 +64,7 @@
       z-index: 10;
       transition: margin-top 0.3s ease;
     }
-
-    h1, h4 {
-      text-align: center;
-      margin: 0.2rem 0;
-    }
-
+    h1, h4 { text-align: center; margin: 0.2rem 0; }
     .highlight-box {
       background: rgba(255, 255, 255, 0.85);
       color: #005670;
@@ -86,14 +76,12 @@
       gap: 8px;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
     }
-
     .description {
       max-width: 90vw;
       font-size: 1.1rem;
       margin: 0.5rem auto 1.5rem;
       text-align: center;
     }
-
     .btn-contact {
       background: white;
       color: #005670;
@@ -106,40 +94,28 @@
       padding: 0.5rem 1rem;
       text-align: center;
     }
-
     .carousel {
       max-width: 95vw;
       margin: 1.5rem auto 2rem;
     }
-
     .carousel-inner {
       border-radius: 16px;
       overflow: hidden;
     }
-
     .carousel-inner img {
       width: 100%;
       height: 75vh;
       object-fit: cover;
     }
-
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       filter: invert(1);
     }
-
     .entreprises-section {
       max-width: 95vw;
       margin: 2rem auto;
       text-align: center;
     }
-
-    .entreprises-section h3 {
-      margin-bottom: 1rem;
-      font-weight: bold;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-    }
-
     .entreprises-logos {
       display: flex;
       justify-content: center;
@@ -148,7 +124,6 @@
       scroll-snap-type: x mandatory;
       padding: 1rem;
     }
-
     .entreprises-logos img {
       flex: 0 0 auto;
       scroll-snap-align: center;
@@ -159,11 +134,9 @@
       transition: filter 0.3s ease;
       cursor: pointer;
     }
-
     .entreprises-logos img:hover {
       filter: brightness(1) invert(0);
     }
-
     .social-icons {
       display: flex;
       justify-content: center;
@@ -172,7 +145,6 @@
       margin-bottom: 1rem;
       flex-wrap: wrap;
     }
-
     .social-icons a {
       display: inline-flex;
       align-items: center;
@@ -184,28 +156,14 @@
       transition: transform 0.3s, box-shadow 0.3s;
       text-decoration: none;
     }
-
     .social-icons a:hover {
       transform: scale(1.1);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
-
-    .facebook {
-      background-color: #3b5998;
-    }
-
-    .instagram {
-      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    }
-
-    .tiktok {
-      background-color: #000;
-    }
-
-    .whatsapp {
-      background-color: #25D366;
-    }
-
+    .facebook { background-color: #3b5998; }
+    .instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+    .tiktok { background-color: #000; }
+    .whatsapp { background-color: #25D366; }
     .slogan {
       color: white;
       font-size: 1.2rem;
@@ -219,21 +177,22 @@
 </head>
 <body>
   <img src="LOGO cOM4FORT.png" alt="Logo COMFORT" class="logo" />
-  <div class="banner-container">
-    <img src="banniere1.jpg" alt="Bannière Com'fort" class="banner-img" />
-  </div>
+  <div class="banner-container"><img src="banniere1.jpg" alt="Bannière" class="banner-img" /></div>
   <img src="avatar 11.jpg" alt="Avatar Samba Thiam" class="avatar" />
-  <h1> Samba THIAM</h1>
-  <h4>
-    <span class="highlight-box">
-      <i class="fas fa-user-tie"></i>  Chargé De Communication
-    </span><br> COM'FORT
-  </h4>
-  <p class="description">
-Samba Thiam est un journaliste fort de 15 ans d’expérience, spécialisé en sport et économie. Reconnu pour sa rigueur et ses analyses pertinentes, il est également chargé de communication de COM’FORT, une agence dédiée à la communication digitale. Entre journalisme et stratégie, il conjugue passion de l'information et expertise en communication moderne.
-  </p>
+  <h1>Samba THIAM</h1>
+  <h4><span class="highlight-box"><i class="fas fa-user-tie"></i> Chargé De Communication</span><br> COM'FORT</h4>
+  <p class="description">Samba Thiam est un journaliste...</p>
   <a href="contact.vcf" class="btn-contact" download>📇 Ajouter Contact</a>
-  <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+  <!-- Bloc localisation -->
+  <div class="text-center mt-4">
+  <a href="https://www.google.com/maps?q=14.739000,-17.463667" target="_blank" class="btn-contact">
+    📍 Voir ma localisation
+  </a>
+</div>
+
+
+  <div class="carousel slide" data-bs-ride="carousel" id="productCarousel">
     <div class="carousel-inner">
       <div class="carousel-item active"><img src="p3.jpg" alt="Produit 1" /></div>
       <div class="carousel-item"><img src="produit2.jpeg" alt="Produit 2" /></div>
@@ -247,33 +206,22 @@ Samba Thiam est un journaliste fort de 15 ans d’expérience, spécialisé en s
       <span class="visually-hidden">Suivant</span>
     </button>
   </div>
-  <div class="text-center mt-5 mb-5">
-    <a href="https://wa.me/221783952347" target="_blank">
-      <img src="main-carte.png" alt="Carte NFC Samba Thiam" style="max-width: 320px; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); cursor: pointer;">
-    </a>
-    <p style="color: white; margin-top: 0.5rem; font-size: 1.1rem;">
-      📲 Cliquez sur <strong>la carte</strong>, ajoutez-nous en contact ou envoyez un message via nos réseaux ci-dessous.
-    </p>
-  </div>
-  <div class="entreprises-section">
-   <h3>Nos entreprises partenaires</h3>
-<div class="entreprises-logos">
-  <a href="https://www.ourydiallo.com/" target="_blank">
-    <img src="entreprise1.png" alt="Entreprise 1" title="Entreprise 1" />
-  </a>
-  <a href="https://www.xn--mdlectronique-chb.store/" target="_blank">
-    <img src="entreprise333.png" alt="Entreprise 3" title="Entreprise 3" />
-  </a>
-</div>
 
+  <div class="entreprises-section">
+    <h3>Nos entreprises partenaires</h3>
+    <div class="entreprises-logos">
+      <a href="https://www.ourydiallo.com/" target="_blank"><img src="entreprise1.png" alt="Entreprise 1" /></a>
+      <a href="https://www.xn--mdlectronique-chb.store/" target="_blank"><img src="entreprise333.png" alt="Entreprise 3" /></a>
     </div>
   </div>
+
   <div class="social-icons text-center">
-     <a href="https://www.facebook.com/people/Comfort-solution/61559220682273/" class="facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+    <a href="https://www.facebook.com/people/Comfort-solution/61559220682273/" class="facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
     <a href="https://www.instagram.com/comfortsolution1/" class="instagram"><i class="fab fa-instagram fa-lg"></i></a>
     <a href="https://www.tiktok.com/@comfortsolution" class="tiktok"><i class="fab fa-tiktok fa-lg"></i></a>
     <a href="https://wa.me/221776425382" class="whatsapp"><i class="fab fa-whatsapp fa-lg"></i></a>
   </div>
+
   <p class="slogan">La créativité au service de votre visibilité!</p>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
